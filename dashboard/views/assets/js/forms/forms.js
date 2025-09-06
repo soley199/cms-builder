@@ -1,11 +1,14 @@
+/*====================================================
+Validacion Fomrulario desde Boostrap5
+==================================================== */
 (function(){
     'use strict';
     window.addEventListener('load', function(){
         //
-        var forms = document.getElementByIdClassName('needs-validation');
+        var forms = document.getElementsByClassName('needs-validation');
         //
-        var validation = Array.prototype.filter.call(forms, function(from){
-            forms.addEventListener('submit', function(event){
+        var validation = Array.prototype.filter.call(forms, function(form){
+            form.addEventListener('submit', function(event){
                 if(form.checkValidity() === false){
                     event.preventDefault();
                     event.stopPropagation();

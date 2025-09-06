@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="d-flex flex-wrap justify-content-center align-content-center vh-100">
         <div class="card border-0  rounded shadow p-5">
-            <form action="" method="POST">
+            <form action="" method="POST" class="needs-validation" novalidate>
                 <h3 class="pt-3 text-center">Instalacíon Dashboard</h3>
                 <hr>
                 <div class="form-group mb-3">
@@ -15,9 +15,10 @@
                     >
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Campo Inválido.</div>
+
                 </div>
                 <div class="form-group mb-3">
-                    <label for="password_admin">Correo Administrador <sup>*</sup></label>
+                    <label for="password_admin">Contraseña Administrador <sup>*</sup></label>
                     <input 
                     type="password"
                     class="form-control rounded"
@@ -27,6 +28,7 @@
                     >
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Campo Inválido.</div>
+
                 </div>
                 <div class="form-group mb-3">
                     <label for="title_admin">Nombre del Dashboard <sup>*</sup></label>
@@ -39,6 +41,7 @@
                     >
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Campo Inválido.</div>
+
                 </div>
                 <div class="form-group mb-3">
                     <label for="symbol_admin">Simbolo del Dashboard <sup>*</sup></label>
@@ -51,6 +54,7 @@
                     >
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Campo Inválido.</div>
+
                 </div>
                 <div class="form-group mb-3">
                     <label for="font_admin">Tipografía del Dashboard </label>
@@ -84,6 +88,12 @@
                 <small><sup>*</sup>Campos Obligatorios</small>
 
                 <button type="submit" class="btn btn-dark btn-block w-100 rounded mt-5">Instalar</button>
+                <?php
+                require_once "controllers/install.controller.php";
+                $install = new InstallController();
+                $install -> install();
+                
+                ?>
             </form>
         </div>
     </div>

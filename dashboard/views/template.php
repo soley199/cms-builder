@@ -92,6 +92,7 @@ foreach ($routesArray as $key => $value){
     <!--=====================================================
     CUSTOM CSS
     ======================================================-->
+	<link rel="stylesheet" href="/views/assets/css/custom/custom.css">
     
 </head>
 <body>
@@ -102,5 +103,6 @@ foreach ($routesArray as $key => $value){
 <!--=====================================================
     CUSTOM JS
 ======================================================-->
+<script src="/views/assets/js/forms/forms.js"></script>
 </body>
 </html>
